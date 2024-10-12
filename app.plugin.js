@@ -51,6 +51,7 @@ project(':unityLibrary').projectDir=new File('../unity/builds/android/unityLibra
 
 const withGradlePropertiesMod = (config) =>
   withGradleProperties(config, (modConfig) => {
+    modConfig.modResults.find(result => result.key === 'org.gradle.jvmargs').value = '-Xmx4096M'
     modConfig.modResults.push({
       type: 'property',
       key: 'unityStreamingAssets',
