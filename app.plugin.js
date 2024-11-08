@@ -9,8 +9,7 @@ const {
 const fs = require('fs');
 const path = require('path');
 
-const withUnity = (config, { name = 'react-native-unity' } = {}) => {
-  config.name = name;
+const withUnity = (config) => {
   config = withAppBuildGradleMod(config);
   config = withSettingsGradleMod(config);
   config = withGradlePropertiesMod(config);
